@@ -1,3 +1,4 @@
+import chai from 'chai';
 const Blog = require("../models/Blog");
 const chai = require("chai");
 const chaiHttp = require("chai-http");
