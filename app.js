@@ -1,8 +1,12 @@
 const express = require("express")
 const app = express()
+const blogRouter = require("./routes/BlogRoutes.");
 
 const mongoose = require("mongoose");
-//configure mongoose
+
+app.use("/api/blogs", blogRouter);
+
+// Connect to MongoDB database using Mongoose
 mongoose.connect(
     process.env.MONGODB_URI || "mongodb://localhost/CRUD",
     {
